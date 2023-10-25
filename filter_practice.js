@@ -16,39 +16,40 @@ describe('.filter Practice', function() {
     expect(evens).to.deep.equal([2, 4, 6, 8, 10]);
   });
 
-  it.skip('Odd numbers', function() {
+  it('Odd numbers', function() {
     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    // Your code here
+    odds = numbers.filter(number => number % 2 !== 0 )
     expect(odds).to.deep.equal([1, 3, 5, 7, 9]);
   });
 
-  it.skip('Words with three letters', function() {
+  it('Words with three letters', function() {
     words = ["pill", "bad", "finger", "cat", "blue", "dog", "table", "red"];
-    // Your code here
+    selected = words.filter(word => word.length === 3)
     expect(selected).to.deep.equal(["bad", "cat", "dog", "red"]);
   });
 
-  it.skip('Words with more than three letters', function() {
+  it('Words with more than three letters', function() {
     words = ["pill", "bad", "finger", "cat", "blue", "dog", "table", "red"];
-    // Your code here
+    selected = words.filter(word => word.length > 3)
+    //greater than operator to check that the length of the word is greater than 3
     expect(selected).to.deep.equal(["pill", "finger", "blue", "table"]);
   });
 
-  it.skip('Words ending in e', function() {
+  it('Words ending in e', function() {
     words = ["are", "you", "strike", "thinking", "belt", "piece", "warble", "sing", "pipe"];
-    // Your code here
+    selected = words.filter(word => word.endsWith('e'))
     expect(selected).to.deep.equal(["are", "strike", "piece", "warble", "pipe"]);
   });
 
-  it.skip('Words ending in ing', function() {
+  it('Words ending in ing', function() {
     words = ["bring", "finger", "drought", "singing", "bingo", "purposeful"];
-    // Your code here
+    selected = words.filter(word => word.endsWith('ing'))
     expect(selected).to.deep.equal(["bring", "singing"]);
   });
 
-  it.skip('Words containing e', function() {
+  it('Words containing e', function() {
     words = ["four", "red", "five", "blue", "pizza", "purple"];
-    // Your code here
+    selected = words.filter(word => word.includes('e'))
     expect(selected).to.deep.equal(["red", "five", "blue", "purple"]);
   });
 

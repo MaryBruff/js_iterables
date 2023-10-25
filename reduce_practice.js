@@ -15,13 +15,19 @@ describe('.reduce Practice', function() {
     // This one's on the house 😉
     numbers = [32, 1, 21, 5, 81, 333];
     result = numbers.reduce((sum, number) => sum + number, 0);
+    //the sum is the initial value and starts at 0 and number is the first element in the array which in this case is 32
+    //every time the reduce goes through the array its adds the next element to the sum
     expect(result).to.equal(473);
   });
 
-  it.skip('String concatenation', function() {
+  it('String concatenation', function() {
     words = ['Hello', ' ', 'world', '!'];
-    // Your code here
+    result = words.reduce((acc, cv) => acc + cv , '' )
+    //array into a string -> fuck the array
+    //acc = initial value is an empty string -> because that's what we want our output to be this data type 
+    //current value is the first element which is the string 'hello'
     expect(result).to.equal('Hello world!');
+    //adding every string together and since there are empty strings those are not being added 
   });
 
   it.skip('Subtracts a list of numbers', function() {
